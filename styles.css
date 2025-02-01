@@ -1,0 +1,160 @@
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/*navbar style*/
+#navbar{
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #738276;
+  padding: 20px;
+  overflow-y: none;
+  border-right: 2px solid #ddd;
+}
+
+#navbar > header{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  
+}
+
+/*navbar links*/
+#navbar ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li{
+  border-bottom: 1px solid #ddd;
+}
+
+#navbar a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+
+#main-doc{
+  margin-left: 300px;
+  padding: 20px;
+  max-width: none;
+}
+
+@media (max-width: 768px){
+  body{
+    flex-direction: column;
+  }
+
+  #navbar{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+    border-right: none;
+    border-bottom: 2px solid #ddd;
+  }
+
+  #navbar ul{
+    display: block;
+  }
+
+  #navbar li{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+  }
+
+  #main-doc{
+    margin-left: 0;
+  }
+
+}
+
+.main-section > header{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main-section > h5{
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.main-section > p{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.main-section > ul{
+  font-size: 16px;
+}
+
+.main-section > ol{
+  font-size: 16px;
+}
+
+.main-section li{
+  margin-bottom: 10px;
+}
+
+.main-section ol{
+  padding-bottom: 5px;
+}
+
+.main-section ul{
+  padding-bottom: 5px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+th{
+  background-color: #738276;
+  color: white;
+  padding: 12px;
+}
+
+td{
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+
+span{
+  background-color: #A9A9A9;
+  padding: 2px 5px;
+  border-radius: 20px;
+}
+
+a{
+  color: #2a2e2b;
+  text-decoration: none;
+  padding: 3px 5px;
+  border-radius: 20px;
+}
+
+a:hover{
+  background-color: lightgrey;
+}
