@@ -1,0 +1,543 @@
+<!DOCTYPE hmtl>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation Page</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav id="navbar">
+      <header>Networking Basics</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#What_is_a_Network">What is a Network</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Network_Components">Network Components</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#IP_Addresses_and_Subnetting">IP Addresses and Subnetting</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#DNS_and_DHCP">DNS and DHCP</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#TCP_IP_Model_vs_OSI_Model">TCP IP Model vs OSI Model</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Common_Networking_Protocols">Common Networking Protocols</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Network_Security_Basics">Network Security Basics</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Troubleshooting_and_Tools">Troubleshooting and Tools</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Conclusion_and_Further_Learning">Conclusion and Further Learning</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <!-- Introduction -->
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <h5>What is Networking?</h5>
+        <p>Networking refers to the practice of connecting computers and other devices to share resources, communicate, and exchange data. A network can be as small as two devices connected in a home or as large as the internet, which connects billions of devices globally.</p>
+
+        <h5>Why is Networking Important?</h5>
+        <ul>
+          <li><b>Communication:</b> Enables email, video calls, messaging, and social media.</li>
+          <li><b>Resource Sharing:</b> Allows devices to share files, printers, and internet connections.</li>
+          <li><b>Resource Sharing:</b> Allows devices to share files, printers, and internet connections.</li>
+          <li><b>Security & Control:</b> Centralized network management improves security and access control.</li>
+        </ul>
+        
+        <h5>Real-World Applications of Networking</h5>
+        <ol>
+          <li><b>The Internet:</b> The largest global network, enabling instant communication and data sharing.</li>
+          <li><b>Corporate Networks:</b> Businesses use networks for data storage, internal communication, and cloud services.</li>
+          <li><b>Home Networks:</b> Wi-Fi connections for smartphones, smart TVs, gaming consoles, and IoT devices.</li>
+          <li><b>Healthcare:</b> Hospitals use networks for patient data storage, telemedicine, and equipment monitoring.</li>
+          <li><b>Banking & Finance:</b> Secure transactions, ATMs, and online banking rely on strong network infrastructures.</li>
+        </ol>
+        <p>In the following sections, we’ll dive deeper into the fundamentals of networking, including network types, components, protocols, and security measures.</p>
+      </section>
+      <!-- What is a Network-->
+      <section class="main-section" id="What_is_a_Network">
+        <header>What is a Network</header>
+        <h5>Definition of a Network?</h5>
+        <p>A network is a system of interconnected devices (computers, servers, routers, smartphones, etc.) that communicate with each other to share resources and exchange data. These connections can be wired (using cables) or wireless (using Wi-Fi, Bluetooth, etc.).</p>
+        <h5>Types of Networks</h5>
+        <p>Networks are categorized based on their size, purpose, and geographic spread. The most common types include:</p>
+        <ol class="numbered-list">
+          <li>Local Area Network (LAN)</li>
+          <ul>
+            <li>Covers a small area such as a home, office, or school.</li>
+            <li>Typically uses Ethernet cables or Wi-Fi for connectivity.</li>
+            <li>Example: A company’s office network connecting computers and printers.</li>
+          </ul>
+
+          <li>Metropolitan Area Network (MAN)</li>
+          <ul>
+            <li>Covers a city or large campus and is larger than a LAN but smaller than a WAN.</li>
+            <li>Uses high-speed connections like fiber optics.</li>
+            <li>Example: A university campus network connecting multiple buildings.</li>
+          </ul>
+
+          <li>Wide Area Network (WAN)</li>
+          <ul>
+            <li>Covers a large geographic area such as a country or the entire world.</li>
+            <li>Uses multiple technologies like fiber optics, satellite links, and leased telephone lines.</li>
+            <li>Example: The Internet, the largest WAN, connects networks globally.</li>
+          </ul>
+
+          <li>Personal Area Network (PAN)</li>
+          <ul>
+            <li>Covers a very small area, usually a few meters.</li>
+            <li>Connects personal devices like smartphones, laptops, and smartwatches via Bluetooth or Wi-Fi.</li>
+            <li>Example: A Bluetooth connection between a phone and a wireless headset.</li>
+          </ul>
+
+          <li>Virtual Private Network (VPN)</li>
+          <ul>
+            <li>A secure, encrypted connection over the internet that allows users to access a private network remotely.</li>
+            <li>Helps protect online privacy by masking IP addresses.</li>
+            <li>Example: A remote worker using a VPN to securely access company resources.</li>
+          </ul>
+        </ol>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Network Type</th>
+              <th>Coverage Area</th>
+              <th>Example Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>LAN</b></td>
+              <td>Small (room, building)</td>
+              <td>Office, school, home Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><b>MAN</b></td>
+              <td>City or campus</td>
+              <td>University network, city-wide Wi-Fi</td>
+            </tr>
+            <tr>
+              <td><b>WAN</b></td>
+              <td>Country or worldwide</td>
+              <td>The Internet, multinational corporations</td>
+            </tr>
+            <tr>
+              <td><b>PAN</b></td>
+              <td>Personal space (few meters)</td>
+              <td>Bluetooth, smartwatch to phone</td>
+            </tr>
+            <tr>
+              <td><b>VPN</b></td>
+              <td>Secure remote access</td>
+              <td>Remote work, privacy protection</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+<!-- Network Components -->
+      <section class="main-section" id="Network_Components">
+        <header>Network Components</header>
+        <p>In networking, several devices play crucial roles in enabling communication, managing traffic, and ensuring security. These devices allow different systems and components to connect, send data, and perform various functions efficiently.</p>
+        <ol>
+          <li><b>Router</b></li>
+            <p>A router is a device that forwards data packets between computer networks. It connects multiple networks together, typically a local network (LAN) to the internet (WAN). Routers use routing tables and protocols to determine the best path for data to travel. They are essential for directing traffic across different networks, ensuring data reaches its correct destination.</p>
+            <p><b>Functions:</b></p>
+            <ul>
+              <li>Directs traffic between networks</li>
+              <li>Assigns IP addresses within the network</li>
+              <li>Enables Internet connection sharing</li>
+            </ul>
+
+          <li><b>Switches</b></li>
+          <p>A switch is a device used to connect devices within a single network (such as a LAN). Unlike a hub, which broadcasts data to all devices, a switch forwards data only to the device it is intended for by examining MAC addresses. This makes switches more efficient in handling data traffic.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Connects devices within the same network</li>
+            <li>Forwards data to specific devices based on MAC addresses</li>
+            <li>Reduces network congestion</li>
+          </ul>
+
+          <li><b>Hubs</b></li>
+          <p>A hub is a basic network device that connects multiple devices within a LAN. However, hubs broadcast data to all connected devices, regardless of the destination, making them inefficient and potentially leading to network congestion. Hubs are largely replaced by switches due to this limitation.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Connects multiple devices within a network</li>
+            <li>Broadcasts data to all devices (inefficient)</li>
+          </ul>
+
+          <li><b>Modems</b></li>
+          <p>A modem (short for modulator-demodulator) is a device that converts digital data from a computer into an analog signal for transmission over telephone lines, and vice versa. It allows computers to connect to the internet by modulating and demodulating signals for communication over long distances.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Converts digital signals to analog and vice versa</li>
+            <li>Connects to the internet (dial-up, DSL, or cable modems)</li>
+            <li>Provides internet access via ISP</li>
+          </ul>
+
+          <li><b>Firewalls</b></li>
+          <p>A firewall is a security device (hardware or software) that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Its primary function is to block unauthorized access to or from a private network while allowing legitimate traffic to pass through.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Monitors and controls traffic between networks</li>
+            <li>Blocks unauthorized access and malicious traffic</li>
+            <li>Can be hardware-based (network firewall) or software-based (host firewall)</li>
+          </ul>
+
+          <li><b>Access Points (AP)</b></li>
+          <p>An access point is a device that allows wireless devices to connect to a wired network using Wi-Fi or other wireless protocols. It acts as a bridge between wireless clients (like laptops or smartphones) and the wired network.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Provides wireless connectivity</li>
+            <li>Acts as a bridge between wireless and wired networks</li>
+            <li>Often used in large spaces or office environments to extend network coverage</li>
+          </ul>
+
+          <li><b>Network Interface Cards (NIC)</b></li>
+          <p>A network interface card (NIC) is a hardware component that allows a computer to connect to a network. It can be wired (Ethernet NIC) or wireless (Wi-Fi NIC). NICs are found in most devices, from computers to printers, enabling them to communicate over a network.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Provides a physical connection to a network</li>
+            <li>Enables devices to send and receive data over a network</li>
+            <li>Can be integrated into devices or installed as an add-on card</li>
+          </ul>
+
+          <li><b>Load Balancers</b></li>
+          <p>A load balancer is a device that distributes incoming network traffic across multiple servers. This ensures no single server becomes overwhelmed with too much traffic, improving performance and reliability.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Distributes traffic across multiple servers</li>
+            <li>Improves website performance and availability</li>
+            <li>Reduces the risk of server overloads</li>
+          </ul>
+
+          <li><b>Bridges</b></li>
+          <p>A bridge is a device that connects and filters traffic between two network segments. It operates at the data link layer (Layer 2) of the OSI model and is used to divide networks into smaller segments to reduce congestion and improve performance.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Connects two network segments</li>
+            <li>Filters data traffic to reduce congestion</li>
+            <li>Operates at the data link layer</li>
+          </ul>
+
+          <li><b>Gateways</b></li>
+          <p>A gateway is a device that connects two different networks, often operating between a local network and the internet. Unlike routers, which forward data within a specific protocol, gateways can translate data between different communication protocols.</p>
+          <p><b>Functions:</b></p>
+          <ul>
+            <li>Connects different networks that use different protocols</li>
+            <li>Translates data between different communication standards</li>
+            <li>Often used to connect a local network to the internet</li>
+          </ul>
+        </ol>
+      </section>
+
+<!--IP Addresses and Subnetting-->
+      <section class="main-section" id="IP_Addresses_and_Subnetting">
+        <header>IP Addresses and Subnetting</header>
+        <ol>
+          <li><b>What is an IP Address?</b></li>
+          <p>An IP address is a unique identifier for devices on a network, allowing them to communicate. It has two parts:</p>
+          <ul>
+            <li><b>Network portion:</b> identifies the network.</li>
+            <li><b>Host portion:</b> identifies the device.</li>
+          </ul>
+
+          <li><b>IPv4 vs. IPv6</b></li>
+          <ul>
+            <li><b>IPv4:</b> Uses a 32-bit address (e.g., 192.168.1.1) and has around 4.3 billion addresses, which are almost exhausted.</li>
+            <li><b>IPv6:</b> Uses a 128-bit address (e.g., 2001:0db8::1) with a nearly unlimited address space, solving IPv4 limitations.</li>
+          </ul>
+
+          <li><b>How IP Addresses Work</b></li>
+          <p>IP addresses are used for packet switching, where data is sent to an IP address, and routers direct it to the correct device.</p>
+          <ul>
+            <li><b>Dynamic IPs:</b> Assigned automatically.</li>
+            <li><b>Static IPs:</b> Manually assigned and fixed.</li>
+          </ul>
+
+          <li><b>Subnetting</b></li>
+          <p>Subnetting divides a network into smaller sub-networks (subnets) to use IP addresses efficiently and improve security.</p>
+          <ul>
+            <li>Subnet Mask: Defines which part of the IP is for the network and which is for the device (host).</li>
+            <ul>
+            <li>Example: <span>255.255.255.0</span> means the first three parts are the network.</li>
+            </ul>
+          </ul>
+          <p><b>CIDR Notation:</b> A more flexible way to write IPs with their subnet mask (e.g., <span>192.168.1.10/24</span>).</p>
+
+          <li><b>IPv4 Address Classes</b></li>
+          <ul>
+            <li><b>Class A:</b> For large networks (16 million hosts).</li>
+            <li><b>Class B:</b> For medium networks (65,000 hosts).</li>
+            <li><b>Class C:</b> For small networks (254 hosts).</li>
+            <li><b>Class D:</b> For multicast.</li>
+            <li><b>Class E:</b> Reserved for experimentation.</li>
+          </ul>
+        </ol>
+      </section>
+
+<!--DNS and DHCP-->
+      <section class="main-section" id="DNS_and_DHCP">
+        <header>DNS and DHCP</header>
+        <h5>What is DNS (Domain Name System)?</h5>
+        <p>DNS is like the phonebook of the internet. It translates human-readable domain names (e.g., <span>www.example.com</span>) into IP addresses (e.g., <span>192.168.1.1</span>), which are required for devices to locate each other on a network.</p>
+        <ul>
+          <li><b>Domain Name:</b> The address you type into the browser.</li>
+          <li><b>IP Address:</b> The actual location of the website on the internet.</li>
+        </ul>
+        <p>When you type a URL in your browser, a DNS query is sent to a DNS server to get the corresponding IP address.</p>
+        <h5>Role of DNS Servers</h5>
+        <ul>
+          <li><b>DNS Server:</b> A computer that stores a database of domain names and their corresponding IP addresses.</li>
+          <li><b>Process:</b></li>
+          <ul>
+            <li>When you request a domain (e.g., <span>www.example.com</span>), your device contacts a <b>DNS server</b>.</li>
+            <li>The DNS server finds the <b>IP address</b> associated with that domain.</li>
+            <li>Your device then uses that IP address to connect to the server hosting the website.</li>
+          </ul>
+        </ul>
+        <h5>What is DHCP (Dynamic Host Configuration Protocol)?</h5>
+        <p>DHCP automatically assigns IP addresses to devices on a network without needing manual configuration.</p>
+        <ul>
+          <li><b>Process:</b></li>
+          <ul>
+            <li>When a device connects to a network, it sends a DHCP request.</li>
+            <li>The DHCP server assigns a free IP address to the device.</li>
+            <li>The device uses this IP address to communicate on the network.</li>
+          </ul>
+        </ul>
+        <p>DHCP reduces the need for network administrators to manually assign and track IP addresses, ensuring each device gets a unique address without conflicts.</p>
+
+        <h5>DNS vs. DHCP</h5>
+        <ul>
+          <li>DNS: Translates domain names to IP addresses, helping devices find each other.</li>
+          <li>DHCP: Automatically assigns IP addresses to devices on a network.</li>
+        </ul>
+      </section>
+
+<!--TCP/IP Model vs OSI Model-->
+      <section class="main-section" id="TCP_IP_Model_vs_OSI_Model">
+        <header>TCP IP Model vs OSI Model</header>
+        <h5>OSI Model (Open Systems Interconnection)</h5>
+        <p>The OSI model is a conceptual framework used to understand how different network protocols interact in layers. It has <b>7 layers</b>:</p>
+        <ol>
+          <li><b>Application Layer:</b> Provides network services directly to users (e.g., HTTP, FTP).</li>
+          <li><b>Presentation Layer:</b> Translates data formats between application and transport layers (e.g., encryption, compression).</li>
+            <li><b>Session Layer:</b> Manages sessions (connections) between applications (e.g., maintaining a login session).</li>
+          <li><b>Transport Layer:</b> Ensures reliable data transfer between systems (e.g., TCP, UDP).</li>
+          <li><b>Network Layer:</b> Routes data between devices (e.g., IP, routing protocols).</li>
+          <li><b>Data Link Layer:</b> Controls access to physical network medium (e.g., Ethernet, MAC addresses).</li>
+          <li><b>Physical Layer:</b> Transmits raw data over physical medium (e.g., cables, switches).</li>
+        </ol>
+        <h5>TCP/IP Model (Transmission Control Protocol/Internet Protocol)</h5>
+        <p>The TCP/IP model is a simpler, more practical model for network communication with <b>4 layers</b>:</p>
+        <ol>
+          <li><b>Application Layer:</b> Combines OSI’s Application, Presentation, and Session layers. It deals with end-user network services (e.g., HTTP, SMTP).</li>
+          <li><b>Transport Layer:</b> Manages end-to-end communication (e.g., TCP, UDP). Similar to OSI’s Transport layer.</li>
+          <li><b>Internet Layer:</b> Handles logical addressing and routing (e.g., IP). Equivalent to OSI's Network layer.</li>
+          <li><b>Link Layer:</b> Manages physical addressing and data transmission over the network. It combines OSI's Data Link and Physical layers.</li>
+        </ol>
+        <h5>Key Differences</h5>
+        <ul>
+          <li><b>Number of Layers:</b> OSI has 7 layers, while TCP/IP has 4.</li>
+          <li><b>Flexibility:</b> The TCP/IP model is more practical and widely used, especially on the internet.</li>
+          <li><b>Functionality:</b> The OSI model is more theoretical, while TCP/IP provides real-world, functional implementation.</li>
+        </ul>
+      </section>
+
+<!--Common Networking Protocols-->
+      <section class="main-section" id="Common_Networking_Protocols">
+        <header>Common Networking Protocols</header>
+        <p>Common networking protocols enable various internet and network functions such as web browsing, secure communications, file transfers, email management, and remote server access. These protocols are fundamental in supporting the functionality of the internet and intranet systems.</p>
+        <ol>
+          <li>HTTP (HyperText Transfer Protocol)</li>
+          <ul>
+            <li><b>Purpose:</b> Used for transferring web pages on the internet.</li>
+            <li><b>Port:</b> 80</li>
+            <li><b>Use:</b> Enables browsers to retrieve web content from servers.</li>
+          </ul>
+          <li>HTTPS (HyperText Transfer Protocol Secure)</li>
+          <ul>
+            <li><b>Purpose:</b> A secure version of HTTP, encrypting data to protect privacy.</li>
+            <li><b>Port:</b> 443</li>
+            <li><b>Use:</b> Ensures secure communication over the web (e.g., online banking).</li>
+          </ul>
+          <li>FTP (File Transfer Protocol)</li>
+          <ul>
+            <li><b>Purpose:</b> Used to transfer files between computers over a network.</li>
+            <li><b>Ports:</b> 20 (data), 21 (control)</li>
+            <li><b>Use:</b> Used for uploading and downloading files from servers.</li>
+          </ul>
+          <li>SMTP (Simple Mail Transfer Protocol)</li>
+          <ul>
+            <li><b>Purpose:</b> Used for sending emails between servers.</li>
+            <li><b>Port:</b> 25 (default), 587 (secure)</li>
+            <li><b>Use:</b> Delivers emails to the recipient's mail server.</li>
+          </ul>
+          <li>SSH (Secure Shell)</li>
+          <ul>
+            <li><b>Purpose:</b> A secure protocol used to access remote systems over a network.</li>
+            <li><b>Ports:</b> 22</li>
+            <li><b>Use:</b> Provides secure login and command-line access to remote computers.</li>
+          </ul>
+          <li>DNS (Domain Name System)</li>
+          <ul>
+            <li><b>Purpose:</b> Resolves domain names (e.g., www.example.com) to IP addresses.</li>
+            <li><b>Ports:</b> 53</li>
+            <li><b>Use:</b> Helps users access websites using human-readable names rather than IP addresses.</li>
+          </ul>
+          <li>DHCP (Dynamic Host Configuration Protocol)</li>
+          <ul>
+            <li><b>Purpose:</b> Automatically assigns IP addresses to devices on a network.</li>
+            <li><b>Ports:</b> 67 (server), 68 (client)</li>
+            <li><b>Use:</b> Simplifies network management by dynamically providing devices with IP addresses.</li>
+          </ul>
+          <li>IMAP (Internet Message Access Protocol)</li>
+          <ul>
+            <li><b>Purpose:</b> Used by email clients to retrieve emails from a mail server.</li>
+            <li><b>Ports:</b> 143 (default), 993 (secure)</li>
+            <li><b>Use:</b> Allows users to access and manage their emails on multiple devices.</li>
+          </ul>
+        </ol>
+      </section>
+
+<!--Network Security Basics-->
+      <section class="main-section" id="Network_Security_Basics">
+        <header>Network Security Basics</header>
+        <p>Network security involves various measures to safeguard data and networks from unauthorized access and attacks. Adopting best practices such as regular updates, strong passwords, and network segmentation can significantly reduce security risks and help maintain a secure network environment.</p>
+        <ol>
+          <li><b>Firewalls</b></li>
+          <ul>
+            <li><b>Purpose:</b> Act as a barrier between trusted internal networks and untrusted external networks, filtering incoming and outgoing traffic.</li>
+            <li><b>Types:</b></li>
+            <ul>
+              <li><b>Hardware Firewalls:</b> Physical devices that protect networks.</li>
+              <li><b>Software Firewalls:</b> Programs installed on devices to monitor traffic.</li>
+            </ul>
+            <li><b>Best Practice:</b> Set up firewalls to block unnecessary ports and services, ensuring only authorized traffic can pass.</li>
+          </ul>
+          <li><b>VPNs (Virtual Private Networks)</b></li>
+          <ul>
+            <li><b>Purpose:</b> Create a secure, encrypted connection over the internet, allowing remote users to access private networks safely.</li>
+            <li><b>Use:</b> VPNs are crucial for secure communication, especially for remote workers or when accessing public Wi-Fi.</li>
+            <li><b>Best Practice:</b> Use strong encryption protocols (like OpenVPN) and multi-factor authentication for VPN access.</li>
+          </ul>
+          <li><b>Encryption</b></li>
+          <ul>
+            <li><b>Purpose:</b> Encrypts data to ensure that it is unreadable to unauthorized users, protecting the confidentiality and integrity of sensitive information.</li>
+            <li><b>Types:</b></li>
+            <ul>
+              <li><b>End-to-End Encryption:</b> Ensures data is encrypted from the sender to the receiver without being decrypted along the way (e.g., messaging apps).</li>
+              <li><b>SSL/TLS:</b> Encrypts data between web servers and clients, ensuring secure communication over HTTPS.</li>
+            </ul>
+            <li><b>Best Practice:</b> Always use strong encryption algorithms (e.g., AES-256) for sensitive data and implement encryption at all layers (data at rest, in transit).</li>
+          </ul>
+          <li><b>Best Practices for Network Security</b></li>
+          <ul>
+            <li><b>Regular Software Updates:</b> Ensure all devices and software are updated to protect against known vulnerabilities.</li>
+            <li><b>Use Strong Passwords and Multi-Factor Authentication (MFA):</b> Protect access with complex passwords and additional verification methods.</li>
+            <li><b>Limit User Access:</b> Apply the principle of least privilege by giving users only the necessary permissions.</li>
+            <li><b>Network Segmentation:</b> Divide networks into smaller, isolated sections to limit access and reduce the spread of potential attacks.</li>
+            <li><b>Intrusion Detection Systems (IDS):</b> Implement IDS to monitor network traffic for signs of suspicious activity.</li>
+          </ul>
+        </ol>
+      </section>
+
+<!--Troubleshooting and Tools-->
+      <section class="main-section" id="Troubleshooting_and_Tools">
+        <header>Troubleshooting and Tools</header>
+        <ol>
+          <li>Ping</li>
+          <ul>
+            <li><b>Purpose: </b>A network utility used to test the reachability of a host (device or server) on a network and measure round-trip time.</li>
+            <li><b>Usage: </b></li>
+            <ul>
+              <li><span>ping <code>hostname/IP</code></span></li>
+              <li>Example: <span>ping google.com</span> checks if Google's servers are reachable.</li>
+            </ul>
+            <li><b>What it shows: </b>If the destination is reachable and the time it takes for data packets to travel to and from the target.</li>
+          </ul>
+          <li>Traceroute</li>
+          <ul>
+            <li><b>Purpose: </b>Tracks the path that data takes from the source to the destination across multiple routers.</li>
+            <li><b>Usage: </b></li>
+            <ul>
+              <li><span>tracert <code>hostname/IP</code></span> (Windows) or <span>traceroute <code>hostname/IP</code></span> (Linux/macOS)</li>
+              <li><span>tracert google.com</span> shows the hops between your device and Google's servers.</li>
+            </ul>
+            <li><b>What it shows: </b>Displays each router (hop) along the route and the time taken for data to pass through them.</li>
+          </ul>
+          <li>nslookup</li>
+          <ul>
+            <li><b>Purpose: </b>A tool used to query DNS servers to find the IP address associated with a domain name.
+</li>
+            <li><b>Usage: </b></li>
+            <ul>
+              <li><span>nslookup <code>domain</code></span></li>
+              <li>Example: <span>nslookup google.com</span> returns the IP address of Google's website.</li>
+            </ul>
+            <li><b>What it shows: </b>Provides details about DNS records, including A records <code>IP addresses</code>, MX records (mail servers), and more.</li>
+          </ul>
+          <li>Wireshark Basics</li>
+          <ul>
+            <li><b>Purpose: </b>A network protocol analyzer used to capture and inspect data packets transmitted over a network.</li>
+            <li><b>Usage: </b></li>
+            <ul>
+              <li>Open Wireshark and start capturing traffic on a specific network interface.</li>
+              <li>Filters such as <span>http</span>, <span>tcp</span>, or <span>ip.addr == 192.168.1.1</span> help narrow down the capture to specific protocols or IP addresses.</li>
+            </ul>
+            <li><b>What it shows: </b>Displays detailed information about each packet's contents, such as headers, protocols, and payloads. Useful for diagnosing network issues and security threats.</li>
+          </ul>
+        </ol>
+      </section>
+
+<!--Conclusion and Further Learning-->
+      <section class="main-section" id="Conclusion_and_Further_Learning">
+        <header>Conclusion and Further Learning</header>
+        <p>Understanding the fundamentals of networking is essential for anyone working with or interested in technology, IT, and cybersecurity. This guide covered the basics of networking, including network types, components, protocols, and security measures. As technology evolves, these concepts remain foundational to managing and troubleshooting modern networks.</p>
+        <p>To continue your learning journey, consider exploring the following resources:</p>
+        <ol>
+          <li><b>Books</b></li>
+          <ul>
+            <li><em>Computer Networking: A Top-Down Approach by James Kurose and Keith Ross</em></li>
+            <li><em>Networking All-in-One For Dummies by Doug Lowe</em></li>
+          </ul>
+          <li><b>Online Courses</b></li>
+          <ul>
+            <li><b><a href="https://www.netacad.com/" target="_blank">Cisco Networking Academy</a>:</b> Offers comprehensive courses on networking fundamentals and certification preparation.</li>
+            <li><b><a href="https://www.coursera.org/browse/computer-science/computer-networking" target="_blank">Coursera Networking Courses</a>:</b> Free and paid courses on networking basics and advanced topics.</li>
+          </ul>
+          </ul>
+          <li><b>Websites & Communities</b></li>
+          <ul>
+            <li><b><a href="https://networkengineering.stackexchange.com/" target="_blank">Network Engineering Stack Exchange</a>:</b> A great place for networking professionals to ask questions and share knowledge.</li>
+            <li><b><a href="https://www.wireshark.org/docs/" target="_blank">Wireshark Documentation</a>:</b> Dive deeper into network analysis with Wireshark’s official documentation.</li>
+          </ul>
+          <li><b>Certifications</b></li>
+          <ul>
+            <li><b>CompTIA Network+:</b> Ideal for beginners looking to gain a solid networking foundation.</li>
+            <li><b>Cisco Certified Network Associate (CCNA):</b> For those who want to specialize in Cisco networking technologies.</li>
+          </ul>
+        </ol>
+        <p>By continuously expanding your knowledge, you'll be better equipped to design, maintain, and troubleshoot network infrastructures, ensuring smooth and secure communication for organizations and individuals alike.</p>
+      </section>
+
+    </main>
+  </body>
+</html>
